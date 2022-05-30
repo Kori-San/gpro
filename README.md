@@ -18,21 +18,6 @@ Whenever you need you can run ```$ gpro run```.
 
 You can then run ```$ gpro kill```.
 
-## Commands
-install: ```$ gpro install``` - Install required directories and PKGs.
-
-run: ```$ gpro run``` - Run Open Project's Docker.
-
-help: ```$ gpro help``` - Display GPRO's list of command.
-
-kill: ```$ gpro kill``` - Kill Open Project's Docker.
-
-state: ```$ gpro state``` - Display Open Project's status.
-
-## Update
-1. Pull the repo
-2. Just re-run ```$ make install```.
-
 ## Settings
 Check the 'vars' section on the script to change settings.
 ```
@@ -48,6 +33,21 @@ hostname="openproject.gpro.com"
 # ↳ The hostname of the docker container.
 ...
 ```
+
+## Commands
+install: ```$ gpro install``` - Install required directories and PKGs.
+
+run: ```$ gpro run``` - Run Open Project's Docker.
+
+help: ```$ gpro help``` - Display GPRO's list of command.
+
+kill: ```$ gpro kill``` - Kill Open Project's Docker.
+
+state: ```$ gpro state``` - Display Open Project's status.
+
+## Update
+1. Pull the repo
+2. Just re-run ```$ make install```.
 
 # OpenProject & Docker
 
