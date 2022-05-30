@@ -1,5 +1,10 @@
 #!/bin/bash
 
+############################################################################
+## GPRO - An OpenProject Utilitary Tool     ________________/  / May 2022 ##
+## └─(v.0.2)                               / By Aymen Ezzayer / Kori-San  ##
+############################################################################
+
 ##############
 # Init
 
@@ -37,6 +42,7 @@ Help(){
     echo "$ gpro run                                # Run Open Project's Docker."
     echo "$ gpro help                               # Display GPRO's list of command."
     echo "$ gpro kill                               # Kill Open Project's Docker."
+    echo "$ gpro rm                                 # Remove Open Project's Docker."
     echo "$ gpro status                             # Display Open Project's status."
 }
 
@@ -103,7 +109,15 @@ elif [ "${1,,}" == "run" ]; then
 # -> Killing the docker.
 elif [ "${1,,}" == "kill" ]; then
   if [ "${#}" -eq "1" ]; then
-    docker stop "${docker_name}" && printf "💀 Docker '%s' was killed\n" "${docker_name}"
+    docker stop "${docker_name}" && printf "🐳 '$ '%s' was stopped\n" "${docker_name}"
+  else
+    error_print "Too many arguments"
+  fi
+# -> Checking if the first argument is "rm" and if the number of arguments is 1. If it is, it will
+#    remove the docker. If not, it will print an error message.
+elif [ ${1,,} == "rm"]; then
+  if [ "${#}" -eq "1" ]; then
+    docker rm "${docker_name}" && printf "🐳 '$ '%s' was removed\n" "${docker_name}"
   else
     error_print "Too many arguments"
   fi
@@ -111,7 +125,7 @@ elif [ "${1,,}" == "kill" ]; then
 #    print the state of the docker. If not, it will print an error message.
 elif [ "${1,,}" == "status" ]; then
   if [ "${#}" -eq "1" ]; then
-    printf "🚨 Docker '%s' is %s\n" "${docker_name}" "$(docker inspect --format='{{.State.Status}}' "${docker_name}")"
+    printf "🐳 Docker '%s' is %s\n" "${docker_name}" "$(docker inspect --format='{{.State.Status}}' "${docker_name}")"
   else
     error_print "Too many arguments"
   fi
