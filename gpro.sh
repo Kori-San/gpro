@@ -37,7 +37,7 @@ Help(){
     echo "$ gpro run                                # Run Open Project's Docker."
     echo "$ gpro help                               # Display GPRO's list of command."
     echo "$ gpro kill                               # Kill Open Project's Docker."
-    echo "$ gpro state                              # Display Open Project's status."
+    echo "$ gpro status                             # Display Open Project's status."
 }
 
 ##############
@@ -107,9 +107,9 @@ elif [ "${1,,}" == "kill" ]; then
   else
     error_print "Too many arguments"
   fi
-# -> Checking if the first argument is "state" and if the number of arguments is 1. If it is, it will
+# -> Checking if the first argument is "status" and if the number of arguments is 1. If it is, it will
 #    print the state of the docker. If not, it will print an error message.
-elif [ "${1,,}" == "state" ]; then
+elif [ "${1,,}" == "status" ]; then
   if [ "${#}" -eq "1" ]; then
     printf "🚨 Docker '%s' is %s\n" "${docker_name}" "$(docker inspect --format='{{.State.Status}}' "${docker_name}")"
   else
