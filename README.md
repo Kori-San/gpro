@@ -6,6 +6,10 @@ An easy to use / install solution heavily based on OpenProject.
 2. Go into the repo.
 3. Run ```$ make install```.
 4. Run ```$ gpro install```.
+5. Connect on http://localhost (Default port is 80)
+6. Connect to admin's account with default credentials: admin / admin.
+7. Change admin's password when asked for.
+8. Enjoy !
 
 ## Run / Stop
 Whenever you need you can run ```$ gpro run```.
@@ -43,12 +47,17 @@ hostname="openproject.gpro.com"
 ...
 ```
 
+# OpenProject & Docker
+
+## Help
+If you have any OpenProject related issue you can check [OpenProject's documentation](https://www.openproject.org/docs/getting-started/openproject-introduction/)
+If you have any Docker related issue refere to the [documentation of docker](https://docs.docker.com/)
+
 ## Docker env.
 Tested on:
   - [Ubuntu 20.04](https://docs.docker.com/engine/install/ubuntu/)
   - [WSL 2](https://docs.docker.com/desktop/windows/wsl/)
-Please if you have any docker related issue refere to the [documentation of docker](https://docs.docker.com/)
 
-## Dependencies
+# Dependencies
 - make
 - docker.io
