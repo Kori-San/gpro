@@ -43,6 +43,8 @@ help: ```$ gpro help``` - Display GPRO's list of command.
 
 kill: ```$ gpro kill``` - Kill Open Project's Docker.
 
+rm: ```$ gpro rm``` - Remove Open Project's Docker.
+
 state: ```$ gpro state``` - Display Open Project's status.
 
 ## Update
