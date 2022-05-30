@@ -2,6 +2,7 @@
 An easy to use / install solution heavily based on OpenProject.
 
 ## Install
+0. Install Docker for your OS (Check [Docker's documentation](https://docs.docker.com/) for more help)
 1. Clone the repo.
 2. Go into the repo.
 3. Run ```$ make install```.
