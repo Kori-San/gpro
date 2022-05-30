@@ -6,10 +6,11 @@ An easy to use / install solution heavily based on OpenProject.
 2. Go into the repo.
 3. Run ```$ make install```.
 4. Run ```$ gpro install```.
-5. Connect on http://localhost (Default port is 80)
-6. Connect to admin's account with default credentials: admin / admin.
-7. Change admin's password when asked for.
-8. Enjoy !
+5. Wait until the service is up (It may take a while).
+6. Connect on http://localhost (Default port is 80)
+7. Connect to admin's account with default credentials: admin / admin.
+8. Change admin's password when asked for.
+9. Enjoy !
 
 ## Run / Stop
 Whenever you need you can run ```$ gpro run```.
