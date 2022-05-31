@@ -24,6 +24,8 @@ You can then run ```$ gpro kill```.
 Check the 'vars' section on the script to change settings.
 
 Everytime you change a parameter be sure to re-run ```$ make install```.
+
+If you change 'exposed_port' run ```$ gpro rm``` before re-run the service.
 ```
 ...
 # [Vars]
