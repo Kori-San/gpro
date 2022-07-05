@@ -72,4 +72,4 @@ Tested on:
 - make
 - docker.io
 
-Kori-San 2022. If you enjoyed GPRO please check '$ baley' which is a command line tool too, but for Ansible's AWX!
+Kori-San 2022. If you enjoyed GPRO please check ['$ baley'](https://github.com/Kori-San/baley) which is a command line tool too, but for Ansible's AWX!
