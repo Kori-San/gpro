@@ -119,7 +119,7 @@ elif [ "${1,,}" == "kill" ]; then
   fi
 # -> Checking if the first argument is "rm" and if the number of arguments is 1. If it is, it will
 #    remove the docker. If not, it will print an error message.
-elif [ ${1,,} == "rm" ]; then
+elif [ "${1,,}" == "rm" ]; then
   if [ "${#}" -eq "1" ]; then
     docker rm "${docker_name}" && printf "🐳 '$ '%s' was removed\n" "${docker_name}"
   else
