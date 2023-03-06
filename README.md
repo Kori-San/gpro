@@ -54,7 +54,7 @@ kill: ```$ gpro kill``` - Kill Open Project's Docker.
 
 rm: ```$ gpro rm``` - Remove Open Project's Docker, it does not remove data !
 
-state: ```$ gpro state``` - Display Open Project's status.
+state: ```$ gpro status``` - Display Open Project's status.
 
 # OpenProject & Docker
 
