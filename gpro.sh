@@ -11,11 +11,11 @@
 # [Vars]
 path="/var/lib/openproject"
 # ↳ Getting the path of the script and then getting the directory of the script.
-exposed_port="80"
+exposed_port="8080"
 # ↳ The port that the web server will be exposed on.
 docker_name="openproject"
 # ↳ The name of the docker container.
-hostname="openproject.gpro.com"
+hostname="localhost"
 # ↳ The hostname of the docker container.
 
 ##############
@@ -101,8 +101,9 @@ elif [ "${1,,}" == "run" ]; then
     else
       printf "🐳 Deploying on port '%s' with path '%s'\n\n" "${exposed_port}" "${path}"
       docker run -d -p ${exposed_port}:80 --name "${docker_name}" \
-        -e SERVER_HOSTNAME="${hostname}" \
-        -e SECRET_KEY_BASE=secret \
+        -e OPENPROJECT_HOST__NAME="${hostname}:${exposed_port}" \
+        -e OPENPROJECT_SECRET_KEY_BASE=secret \
+        -e OPENPROJECT_HTTPS=false \
         -v ${path}/pgdata:/var/openproject/pgdata \
         -v ${path}/assets:/var/openproject/assets \
         openproject/community:12 && printf "🐳 '$ '%s' is running\n" "${docker_name}"
