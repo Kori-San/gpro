@@ -3,29 +3,30 @@ An easy to use / install solution heavily based on OpenProject.
 
 ## Install
 1. Install Docker for your OS (Check [Docker's documentation](https://docs.docker.com/) for more help)
-2. Clone the repo.
-3. Go into the repo.
-4. Check / Change settings by checking the vars section of 'gpro.sh'
-5. Run ```$ make install```.
-6. Run ```$ gpro install```.
-7. Run ```$ gpro run```.
-8. Wait until the service is up (It may take a while).
-9. Connect on http://localhost (Default port is 80)
-10. Connect to admin's account with default credentials: admin / admin.
-11. Change admin's password when asked for.
-12. Enjoy !
+2. Clone the repo and access it.
+3. Check / Change settings by checking the vars section of 'gpro.sh'
+4. Run ```$ make install```.
+> Note that you need root access to install gpro as a command. You can gain root access either by using '$ sudo' or by using a user in the 'root' group.
+5. Run ```$ gpro install```.
+6. Run ```$ gpro run```.
+7. Wait until the service is up (It may take a while).
+8. Connect on http://localhost (Default port is 80)
+9. Connect to admin's account with default credentials: admin / admin.
+10. Change admin's password when asked for.
+11. Enjoy !
 
 ## Run / Stop
-Whenever you need you can run ```$ gpro run```.
+Whenever you need to make your server operation, you can run ```$ gpro run```.
 
-You can then run ```$ gpro kill```.
+You can then run ```$ gpro kill``` to stop it.
+
+## Update
+1. Pull the repo
+2. Just re-run ```$ make install```.
 
 ## Settings
 Check the 'vars' section on the script to change settings.
 
-Everytime you change a parameter be sure to re-run ```$ make install```.
-
-If you change 'exposed_port' run ```$ gpro rm``` before re-run the service.
 ```
 ...
 # [Vars]
@@ -40,6 +41,8 @@ hostname="openproject.gpro.com"
 ...
 ```
 
+### ⚠️ **WARNING** Everytime you change a parameter be sure to re-run the ```$ make install``` command and if you change 'exposed_port' run ```$ gpro rm``` before re-running the service.
+
 ## Commands
 install: ```$ gpro install``` - Install required directories and PKGs.
 
@@ -49,13 +52,9 @@ help: ```$ gpro help``` - Display GPRO's list of command.
 
 kill: ```$ gpro kill``` - Kill Open Project's Docker.
 
-rm: ```$ gpro rm``` - Remove Open Project's Docker.
+rm: ```$ gpro rm``` - Remove Open Project's Docker, it does not remove data !
 
 state: ```$ gpro state``` - Display Open Project's status.
-
-## Update
-1. Pull the repo
-2. Just re-run ```$ make install```.
 
 # OpenProject & Docker
 
