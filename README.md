@@ -10,7 +10,7 @@ An easy to use / install solution heavily based on OpenProject.
 5. Run ```$ gpro install```.
 6. Run ```$ gpro run```.
 7. Wait until the service is up (It may take a while).
-   > Check 'docker logs openproject -f' if you want to know the status of your container
+   > Execute '$ docker logs openproject -f' if you want to know the status of your container
 8. Connect on http://localhost:8080 (Default port is 8080)
 9. Connect to admin's account with default credentials: admin / admin.
 10. Change admin's password when asked for.
